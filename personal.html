@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Info</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-body">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="profile-section">
+      <img src="https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=250&h=199&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="User Logo" class="profile-img" />
+      <h2 id="displayName">User</h2>
+      <p id="gymId">Gym ID: GYM-000</p>
+    </div>
+    <ul class="menu">
+      <li><a href="dashboard.html">🏠 Dashboard</a></li>
+      <li><a href="personal.html">👤 Personal Info</a></li>
+      <li><a href="progress.html">📈 Gym Progress</a></li>
+      <li><a href="#" id="exportPdfBtn">📄 Export PDF</a></li>
+      <li><a href="#" id="logout">🚪 Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>👤 Personal Information</h1>
+    <div class="dashboard-card">
+      <label>Name:</label>
+      <input type="text" id="personName" readonly><br>
+
+      <label>Mobile Number:</label>
+      <input type="tel" id="personMobile" placeholder="Enter mobile number"><br>
+
+      <label>Gym ID:</label>
+      <input type="text" id="personGymId" ><br>
+
+      <button id="savePersonalBtn">💾 Save Info</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.0/jspdf.plugin.autotable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
