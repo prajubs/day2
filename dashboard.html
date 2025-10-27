@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-body">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="profile-section">
+      <img src="https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=250&h=199&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" 
+           alt="User Logo" class="profile-img" />
+      <h2 id="displayName">User</h2>
+      <p id="gymId">Gym ID: GYM-000</p>
+    </div>
+    <ul class="menu">
+      <li><a href="#">🏠 Dashboard</a></li>
+      <li><a href="personal.html">👤 Personal Info</a></li>
+      <li><a href="progress.html">📈 Gym Progress</a></li>
+      <li><a href="#" id="exportPdfBtn">📄 Export PDF</a></li>
+      <li><a href="#" id="logout">🚪 Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Dashboard Main -->
+  <div class="main-content">
+    <h1>Welcome, <span id="userWelcome"></span>!</h1>
+    <p id="currentDate"></p>
+
+    <div class="dashboard-card">
+      <h3>Today's Log</h3>
+      
+      <label>Weight Before:</label>
+      <input type="number" id="weightBefore" placeholder="kg"><br>
+    
+      <label>Warm-up Time:</label>
+      <input type="text" id="warmupTime" placeholder="e.g., 10 mins"><br>
+    
+      <label>Exercises Done:</label>
+      <input type="text" id="exercisesDone" placeholder="e.g., Bench press, Squat"><br>
+    
+      <label>Reps / Weight:</label>
+      <input type="text" id="repsWeight" placeholder="e.g., 3x10 @ 40kg"><br>
+    
+      <label>Weight After:</label>
+      <input type="number" id="weightAfter" placeholder="kg"><br>
+    
+      <h4>🍽️ Food Eaten</h4>
+      <label>Morning:</label>
+      <input type="text" id="foodMorning" placeholder="e.g., Oats, Eggs"><br>
+
+      <label>Afternoon:</label>
+      <input type="text" id="foodAfternoon" placeholder="e.g., Rice, Chicken"><br>
+
+      <label>Night:</label>
+      <input type="text" id="foodNight" placeholder="e.g., Salad, Milk"><br>
+    
+      <button id="saveEntryBtn">💾 Save Entry</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
