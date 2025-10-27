@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Progress</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body class="dashboard-body">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="profile-section">
+      <img src="https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=250&h=199&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="User Logo" class="profile-img" />
+      <h2 id="displayName">User</h2>
+      <p id="gymId">Gym ID: GYM-000</p>
+    </div>
+    <ul class="menu">
+      <li><a href="dashboard.html">🏠 Dashboard</a></li>
+      <li><a href="#">👤 Personal Info</a></li>
+      <li><a href="progress.html">📈 Gym Progress</a></li>
+      <li><a href="#" id="exportPdfBtn">📄 Export PDF</a></li>
+      <li><a href="#" id="logout">🚪 Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Progress Table -->
+  <div class="main-content">
+    <h1>📈 Gym Progress</h1>
+    <p>Track all your saved workout sessions below:</p>
+    
+    <table id="progressTable">
+        <div style="text-align:right; margin-top:15px;">
+            <button id="clearDataBtn"
+              style="background:#e63946; color:white; border:none; padding:10px 18px; border-radius:8px; cursor:pointer;">
+              🧹 Clear All Progress
+            </button>
+          </div>
+          
+          <h3 style="margin-top: 30px;">📈 Weight Progress Chart</h3>
+          <canvas id="weightChart" style="width:100%;max-height:400px;"></canvas>
+
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Weight Before</th>
+          <th>Warm-up</th>
+          <th>Exercises</th>
+          <th>Reps/Weight</th>
+          <th>Weight After</th>
+          <th>Food Eaten</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.0/jspdf.plugin.autotable.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
